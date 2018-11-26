@@ -15,11 +15,11 @@ const fetchVideoInfo = require('youtube-info');
 
 const yt_api_key = "AIzaSyDeoIH0u1e72AtfpwSKKOSy3IPp2UHzqi4";
 
-const prefix = '9';
+const prefix = '1';
 
 client.on('ready', function() {
 
-    console.log(`ءلبوت ءلقمدن ءونلاين هه يدينم ${client.user.username}`);
+    console.log(`Mal Team ${client.user.username}`);
 
 });
 
@@ -61,52 +61,52 @@ var now_playing = [];
 
 \\\\\\\\\\\\\\\\\\\\\\\\V/////////////////////////
 
-\\\\\\\\\\\\\\\\\\\\\\\\V/////////////////////////
+\\\\\\\\\\\\\\\\\\\\\\\\V/////////////////////////By:Mahmoud-QuaStyle
 
 \\\\\\\\\\\\\\\\\\\\\\\\V/////////////////////////
 
 */
 
-client.on('ready', () => {});
+client.on('ready', () => {});\\\\\\\\\\\\\\\\\\\\\\\/////////////////////////By:Mahmoud-QuaStyle
 
-var download = function(uri, filename, callback) {
+var download = function(uri, filename, callback) {\\\\\\\\\\\\\\\/////////////////////////By:Mahmoud-QuaStyle
+\\\\\\\\\\\\\\\/////////////////////////By:Mahmoud-QuaStyle
+    request.head(uri, function(err, res, body) {\\\\\\\\\\\\\\\/////////////////////////By:Mahmoud-QuaStyle
 
-    request.head(uri, function(err, res, body) {
+        console.log('content-type:', res.headers['content-type']);\\\\\\\\\\\\\\\/////////////////////////By:Mahmoud-QuaStyle
+\\\\\\\\\\\\\\\/////////////////////////By:Mahmoud-QuaStyle
+        console.log('content-length:', res.headers['content-length']);\\\\\\\\\\\\\\\/////////////////////////By:Mahmoud-QuaStyle
+\\\\\\\\\\\\\\\/////////////////////////By:Mahmoud-QuaStyle
 
-        console.log('content-type:', res.headers['content-type']);
-
-        console.log('content-length:', res.headers['content-length']);
-
-
-        request(uri).pipe(fs.createWriteStream(filename)).on('close', callback);
-
-    });
+        request(uri).pipe(fs.createWriteStream(filename)).on('close', callback);\\\\\\\\\\\\\\\/////////////////////////By:Mahmoud-QuaStyle
+\\\\\\\\\\\\\\\/////////////////////////By:Mahmoud-QuaStyle
+    });\\\\\\\\\\\\\\\/////////////////////////By:Mahmoud-QuaStyle
 
 };
 
-
+\\\\\\\\\\\\\\\/////////////////////////By:Mahmoud-QuaStyle
 client.on('message', function(message) {
 
-    const member = message.member;
+    const member = message.member;\\\\\\\\\\\\\\\/////////////////////////By:Mahmoud-QuaStyle
 
-    const mess = message.content.toLowerCase();
+    const mess = message.content.toLowerCase();\\\\\\\\\\\\\\\/////////////////////////By:Mahmoud-QuaStyle
 
-    const args = message.content.split(' ').slice(1).join(' ');
+    const args = message.content.split(' ').slice(1).join(' ');\\\\\\\\\\\\\\\/////////////////////////By:Mahmoud-QuaStyle
 
 
-    if (mess.startsWith(prefix + 'play')) {
+    if (mess.startsWith(prefix + 'play')) {\\\\\\\\\\\\\\\/////////////////////////By:Mahmoud-QuaStyle
 
         if (!message.member.voiceChannel) return message.channel.send('**❌ You have to be in a voice channel to use this command.**');
 
         // if user is not insert the URL or song title
-
+\\\\\\\\\\\\\\\/////////////////////////By:Mahmoud-QuaStyle
         if (args.length == 0) {
 
-            let play_info = new Discord.RichEmbed()
+            let play_info = new Discord.RichEmbed()\\\\\\\\\\\\\\\/////////////////////////By:Mahmoud-QuaStyle
 
                 .setAuthor(client.user.username, client.user.avatarURL)
 
-                .setFooter('' + message.author.tag)
+                .setFooter('' + message.author.tag)\\\\\\\\\\\\\\\/////////////////////////By:Mahmoud-QuaStyle
 
                 .setDescription('**1play [Link or query]**')
 
@@ -135,7 +135,7 @@ client.on('message', function(message) {
 ${videoInfo.title}
 
 **`)
-
+\\\\\\\\\\\\\\\/////////////////////////By:Mahmoud-QuaStyle
                         .setColor("#a637f9")
 
                         .setFooter('' + message.author.tag)
@@ -153,7 +153,7 @@ ${videoInfo.title}
 
             });
 
-        }
+        }/////////////////////////By:Mahmoud-QuaStyle
 
         else {
 
@@ -175,7 +175,7 @@ ${videoInfo.title}
                         .setAuthor(client.user.username, client.user.avatarURL)
 
                         .addField('Searching 🔎', `**${videoInfo.title}
-
+/////////////////////By:Mahmoud-QuaStyle
 **`)
 
                       .setColor("RANDOM")
@@ -191,7 +191,7 @@ ${videoInfo.title}
 
                message.channel.send(`
 
-**Playing 🎶** **${videoInfo.title}**`)
+**Playing 🎶** **${videoInfo.title}**`)/////////////////////By:Mahmoud-QuaStyle
 
                client.user.setActivity(videoInfo.title, {type:'LISTENING'});
 
@@ -201,7 +201,7 @@ ${videoInfo.title}
 
         }
 
-    }
+    }/////////////////////By:Mahmoud-QuaStyle
 
     else if (mess.startsWith(prefix + 'skip')) {
 
@@ -209,7 +209,7 @@ ${videoInfo.title}
 
         message.channel.send('**⏩ Skipped 👍**').then(() => {
 
-            skip_song(message);
+            skip_song(message);/////////////////////By:Mahmoud-QuaStyle
 
             var server = server = servers[message.guild.id];
 
@@ -218,7 +218,7 @@ ${videoInfo.title}
         });
 
     }
-
+/////////////////////By:Mahmoud-QuaStyle
     else if (message.content.startsWith(prefix + 'volume')) {
 
         if (!message.member.voiceChannel) return message.channel.send('**❌ You have to be in a voice channel to use this command.**');
@@ -233,101 +233,101 @@ ${videoInfo.title}
 
         message.channel.sendMessage(`**Volume: ** **${dispatcher.volume*50}%** `);
 
-    }
+    }/////////////////////By:Mahmoud-QuaStyle
 
-    else if (mess.startsWith(prefix + 'pause')) {
+    else if (mess.startsWith(prefix + 'pause')) {/////////////////////By:Mahmoud-QuaStyle
 
         if (!message.member.voiceChannel) return message.channel.send('**❌ You have to be in a voice channel to use this command.**');
 
         message.channel.send('**Paused ⏸**').then(() => {
 
-            dispatcher.pause();
+            dispatcher.pause();/////////////////////By:Mahmoud-QuaStyle
 
-        });
+        });/////////////////////By:Mahmoud-QuaStyle
 
-    }
+    }/////////////////////By:Mahmoud-QuaStyle
 
-    else if (mess.startsWith(prefix + 'resume')) {
+    else if (mess.startsWith(prefix + 'resume')) {/////////////////////By:Mahmoud-QuaStyle
 
         if (!message.member.voiceChannel) return message.channel.send('**❌ You have to be in a voice channel to use this command.**');
 
             message.channel.send('**⏯ Resuming 👍**').then(() => {
 
-            dispatcher.resume();
+            dispatcher.resume();/////////////////////By:Mahmoud-QuaStyle
 
         });
-
+/////////////////////By:Mahmoud-QuaStyle
     }
-
-    else if (mess.startsWith(prefix + 'leave')) {
+/////////////////////By:Mahmoud-QuaStyle
+    else if (mess.startsWith(prefix + 'leave')) {/////////////////////By:Mahmoud-QuaStyle
 
         if (!message.member.voiceChannel) return message.channel.send('**❌ You have to be in a voice channel to use this command.**');
 
-        message.channel.send('**📭 Successfully disconnected**');
+        message.channel.send('**📭 Successfully disconnected**');/////////////////////By:Mahmoud-QuaStyle
 
-        var server = server = servers[message.guild.id];
+        var server = server = servers[message.guild.id];/////////////////////By:Mahmoud-QuaStyle
 
-        if (message.guild.voiceConnection) message.guild.voiceConnection.disconnect();
+        if (message.guild.voiceConnection) message.guild.voiceConnection.disconnect();/////////////////////By:Mahmoud-QuaStyle
 
-    }
-
-    else if (mess.startsWith(prefix + 'join')) {
-
+    }/////////////////////By:Mahmoud-QuaStyle
+/////////////////////By:Mahmoud-QuaStyle
+    else if (mess.startsWith(prefix + 'join')) {/////////////////////By:Mahmoud-QuaStyle
+/////////////////////By:Mahmoud-QuaStyle
         if (!message.member.voiceChannel) return message.channel.send('**❌ You have to be in a voice channel to use this command.**');
+/////////////////////By:Mahmoud-QuaStyle
+        message.member.voiceChannel.join().then(message.channel.send('**👍 Joined**'));/////////////////////By:Mahmoud-QuaStyle
 
-        message.member.voiceChannel.join().then(message.channel.send('**👍 Joined**'));
-
-    }
+    }/////////////////////By:Mahmoud-QuaStyle
 
     else if (mess.startsWith(prefix + 'play')) {
-
+/////////////////////By:Mahmoud-QuaStyle
         if (!message.member.voiceChannel) return message.channel.send('**❌ You have to be in a voice channel to use this command.**');
-
+/////////////////////By:Mahmoud-QuaStyle
         if (isPlaying == false) return message.channel.send('**❌ The player is not paused**');
-
+/////////////////////By:Mahmoud-QuaStyle
         let playing_now_info = new Discord.RichEmbed()
-
+/////////////////////By:Mahmoud-QuaStyle
             .setAuthor(client.user.username, client.user.avatarURL)
-
+/////////////////////By:Mahmoud-QuaStyle
             .addField('Searching 🔎', `**
 
 ${videoInfo.title}
+/////////////////////By:Mahmoud-QuaStyle
+**`)/////////////////////By:Mahmoud-QuaStyle
+/////////////////////////////////////////By:Mahmoud-QuaStyle/By:Mahmoud-QuaStyle
+            .setColor("RANDOM")/////////////////////By:Mahmoud-QuaStyle
+/////////////////////By:Mahmoud-QuaStyle
+            .setFooter('Added To Queue: ' + message.author.tag)/////////////////////By:Mahmoud-QuaStyle
 
-**`)
+            .setThumbnail(videoInfo.thumbnailUrl)/////////////////////By:Mahmoud-QuaStyle
+/////////////////////By:Mahmoud-QuaStyle
+        //.setDescription('?') 
 
-            .setColor("RANDOM")
+        message.channel.sendEmbed(playing_now_info);/////////////////////By:Mahmoud-QuaStyle
 
-            .setFooter('Added To Queue: ' + message.author.tag)
+    }/////////////////////By:Mahmoud-QuaStyle
 
-            .setThumbnail(videoInfo.thumbnailUrl)
-
-        //.setDescription('?')
-
-        message.channel.sendEmbed(playing_now_info);
-
-    }
-
-});
+});/////////////////////By:Mahmoud-QuaStyle
 
 
-function skip_song(message) {
+function skip_song(message) {/////////////////////By:Mahmoud-QuaStyle
 
     if (!message.member.voiceChannel) return message.channel.send('**❌ You have to be in a voice channel to use this command.**');
 
-    dispatcher.end();
+    dispatcher.end();/////////////////////By:Mahmoud-QuaStyle
 
 }
 
 
-function playMusic(id, message) {
+function playMusic(id, message) {/////////////////////By:Mahmoud-QuaStyle
 
-    voiceChannel = message.member.voiceChannel;
+    voiceChannel = message.member.voiceChannel;/////////////////////By:Mahmoud-QuaStyle
 
 
 
-    voiceChannel.join().then(function(connectoin) {
+    voiceChannel.join().then(function(connectoin) {/////////////////////By:Mahmoud-QuaStyle
 
-        let stream = ytdl('https://www.youtube.com/watch?v=' + id, {
+        let stream = ytdl('https://www.youtube.com/watch?v=' + id, {/////////////////////By:Mahmoud-QuaStyle
 
             filter: 'audioonly'
 
@@ -338,76 +338,76 @@ function playMusic(id, message) {
         skippers = [];
 
 
-        dispatcher = connectoin.playStream(stream);
+        dispatcher = connectoin.playStream(stream);/////////////////////By:Mahmoud-QuaStyle
 
-        dispatcher.on('end', function() {
+        dispatcher.on('end', function() {/////////////////////By:Mahmoud-QuaStyle
 
-            skipReq = 0;
-
+            skipReq = 0;/////////////////////By:Mahmoud-QuaStyle
+/////////////////////By:Mahmoud-QuaStyle
             skippers = [];
-
+/////////////////////By:Mahmoud-QuaStyle
             queue.shift();
 
             queueNames.shift();
-
+/////////////////////By:Mahmoud-QuaStyle/////////////////////By:Mahmoud-QuaStyle
             if (queue.length === 0) {
-
-                queue = [];
-
+/////////////////////By:Mahmoud-QuaStyle
+                queue = [];/////////////////////By:Mahmoud-QuaStyle
+/////////////////////By:Mahmoud-QuaStyle
                 queueNames = [];
-
+/////////////////////By:Mahmoud-QuaStyle
                 isPlaying = false;
 
             }
 
-            else {
+            else {/////////////////////By:Mahmoud-QuaStyle
+/////////////////////By:Mahmoud-QuaStyle
+                setTimeout(function() {/////////////////////By:Mahmoud-QuaStyle
 
-                setTimeout(function() {
+                    playMusic(queue[0], message);/////////////////////By:Mahmoud-QuaStyle
 
-                    playMusic(queue[0], message);
+                }, 500);/////////////////////By:Mahmoud-QuaStyle
+/////////////////////By:Mahmoud-QuaStyle
+            }/////////////////////By:Mahmoud-QuaStyle
 
-                }, 500);
+        });/////////////////////By:Mahmoud-QuaStyle
+/////////////////////By:Mahmoud-QuaStyle
+    });/////////////////////By:Mahmoud-QuaStyle
 
-            }
+}/////////////////////By:Mahmoud-QuaStyle
 
-        });
+/////////////////////By:Mahmoud-QuaStyle
+function getID(str, cb) {/////////////////////By:Mahmoud-QuaStyle
+/////////////////////By:Mahmoud-/////////////////////By:Mahmoud-QuaStyleQuaStyle
+    if (isYoutube(str)) {/////////////////////By:Mahmoud-QuaStyle
 
-    });
+        cb(getYoutubeID(str));/////////////////////By:Mahmoud-QuaStyle
 
-}
+    }/////////////////////By:Mahmoud-QuaStyle
 
+    else {/////////////////////By:Mahmoud-QuaStyle
 
-function getID(str, cb) {
-
-    if (isYoutube(str)) {
-
-        cb(getYoutubeID(str));
-
-    }
-
-    else {
-
-        search_video(str, function(id) {
+        search_video(str, function(id) {/////////////////////By:Mahmoud-QuaStyle
 
             cb(id);
-
-        });
-
-    }
-
+/////////////////////By:Mahmoud-QuaStyle
+        });/////////////////////By:Mahmoud-QuaStyle
+/////////////////////By:Mahmoud-QuaStyle
+    }/////////////////////By:Mahmoud-QuaStyle
+/////////////////////By:Mahmoud-QuaStyle
 }
+/////////////////////By:Mahmoud-QuaStyle
 
-
-function add_to_queue(strID) {
+function add_to_queue(strID) {/////////////////////By:Mahmoud-QuaStyle
 
     if (isYoutube(strID)) {
 
-        queue.push(getYoutubeID(strID));
+        queue.push(getYoutubeID(strID));/////////////////////By:Mahmoud-QuaStyle
 
     }
 
-    else {
-
+    else {/////////////////////By:Mahmoud-QuaStyle
+/////////////////////By:Mahmoud-QuaStyle
         queue.push(strID);
 
     }
@@ -419,9 +419,9 @@ function search_video(query, cb) {
 
     request("https://www.googleapis.com/youtube/v3/search?part=id&type=video&q=" + encodeURIComponent(query) + "&key=" + yt_api_key, function(error, response, body) {
 
-        var json = JSON.parse(body);
+        var json = JSON.parse(body);/////////////////////By:Mahmoud-QuaStyle
 
-        cb(json.items[0].id.videoId);
+        cb(json.items[0].id.videoId);/////////////////////By:Mahmoud-QuaStyle
 
     });
 
@@ -429,13 +429,19 @@ function search_video(query, cb) {
 
 
 
-function isYoutube(str) {
+function isYoutube(str) {/////////////////////By:Mahmoud-QuaStyle
 
-    return str.toLowerCase().indexOf('youtube.com') > -1;
+    return str.toLowerCase().indexOf('youtube.com') > -1;/////////////////////By:Mahmoud-QuaStyle
 
 }
 
 
+////////////////////By:Mahmoud-QuaStyle
+////////////////////By:Mahmoud-QuaStyle
+////////////////////By:Mahmoud-QuaStyle
+
+
+////////////////////By:Mahmoud-QuaStyle
 
 
 
@@ -445,19 +451,13 @@ function isYoutube(str) {
 
 
 
+////////////////////By:Mahmoud-QuaStyle
 
+////////////////////By:Mahmoud-QuaStyle
 
+const developers = ["411137717884289024","another id","another another id"]////////////////////By:Mahmoud-QuaStyle
 
-
-
-
-
-
-
-
-const developers = ["457174878530043907","another id","another another id"]
-
-const adminprefix = prefix
+const adminprefix = '1';
 
 client.on('message', message => {
 
@@ -483,8 +483,8 @@ client.on('message', message => {
 
                         .setAuthor(message.author.username,message.author.avatarURL)
 
-                        .setColor('RANDOM')
-
+                        .setColor('RANDOM')////////////////////By:Mahmoud-QuaStyle
+////////////////////By:Mahmoud-QuaStyle////////////////////By:Mahmoud-QuaStyle
                  .addField("**PLAYING 🎮 **","** **")
 
          message.channel.send({embed:embed});
@@ -584,9 +584,9 @@ client.on('message', message => {
 } else
 
 if (message.content.startsWith(adminprefix + 'setavatar')) {
-
+////////////////////By:Mahmoud-QuaStyle
   client.user.setAvatar(argresult);
-
+////////////////////By:Mahmoud-QuaStyle
     message.channel.send(`**Changing The Avatar To , ⚡ ****${argresult}** `);
 
 }
