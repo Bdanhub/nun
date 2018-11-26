@@ -61,13 +61,12 @@ var now_playing = [];
 
 \\\\\\\\\\\\\\\\\\\\\\\\V/////////////////////////
 
-\\\\\\\\\\\\\\\\\\\\\\\\V/////////////////////////By:Mahmoud-QuaStyle
 
 \\\\\\\\\\\\\\\\\\\\\\\\V/////////////////////////
 
 */
 
-client.on('ready', () => {});\\\\\\\\\\\\\\\\\\\\\\\/////////////////////////By:Mahmoud-QuaStyle
+client.on('ready', () => {});
 
 var download = function(uri, filename, callback) {\\\\\\\\\\\\\\\/////////////////////////By:Mahmoud-QuaStyle
 \\\\\\\\\\\\\\\/////////////////////////By:Mahmoud-QuaStyle
