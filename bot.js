@@ -15,11 +15,11 @@ const fetchVideoInfo = require('youtube-info');
 
 const yt_api_key = "AIzaSyDeoIH0u1e72AtfpwSKKOSy3IPp2UHzqi4";
 
-const prefix = '1';
+const prefix = '9';
 
 client.on('ready', function() {
 
-    console.log(`Mal Team ♥ ${client.user.username}`);
+    console.log(`ءلبوت ءلقمدن ءونلاين هه يدينم ${client.user.username}`);
 
 });
 
@@ -73,10 +73,8 @@ var download = function(uri, filename, callback) {
     });
 
 };
-////////////////////////Mal Mahmoud-QuaStyle 
-////////////////////////Mal Mahmoud-QuaStyle 
 
-////////////////////////Mal Mahmoud-QuaStyle 
+
 client.on('message', function(message) {
 
     const member = message.member;
@@ -107,7 +105,7 @@ client.on('message', function(message) {
             return;
 
         }
-////////////////////////Mal Mahmoud-QuaStyle 
+
         if (queue.length > 0 || isPlaying) {
 
             getID(args, function(id) {
@@ -138,7 +136,7 @@ ${videoInfo.title}
 
                     now_playing.push(videoInfo.title);
 
-////////////////////////Mahmoud-QuaStyle
+
                 });
 
             });
@@ -147,7 +145,7 @@ ${videoInfo.title}
 
         else {
 
-////////////////////////Mahmoud-QuaStyle
+
             isPlaying = true;
 
             getID(args, function(id) {
@@ -177,7 +175,7 @@ ${videoInfo.title}
                     // .setDescription('?')
 
                     message.channel.sendEmbed(play_info)
-////////////////////////Mahmoud-QuaStyle
+
                message.channel.send(`
 **Playing 🎶** **${videoInfo.title}**`)
 
@@ -204,7 +202,7 @@ ${videoInfo.title}
             if (message.guild.voiceConnection) message.guild.voiceConnection.disconnect();
 
         });
-////////////////////////Mahmoud-QuaStyle
+
     }
 
     else if (message.content.startsWith(prefix + 'volume')) {
@@ -232,7 +230,7 @@ ${videoInfo.title}
             dispatcher.pause();
 
         });
-////////////////////////Mahmoud-QuaStyle
+
     }
 
     else if (mess.startsWith(prefix + 'resume')) {
@@ -256,7 +254,7 @@ ${videoInfo.title}
         var server = server = servers[message.guild.id];
 
         if (message.guild.voiceConnection) message.guild.voiceConnection.disconnect();
-////////////////////////Mahmoud-QuaStyle
+
     }
 
     else if (mess.startsWith(prefix + 'join')) {
@@ -280,7 +278,7 @@ ${videoInfo.title}
             .addField('Searching 🔎', `**
 ${videoInfo.title}
 **`)
-////////////////////////Mahmoud-QuaStyle
+
             .setColor("RANDOM")
 
             .setFooter('Added To Queue: ' + message.author.tag)
@@ -295,7 +293,7 @@ ${videoInfo.title}
 
 });
 
-////////////////////////Mahmoud-QuaStyle
+
 function skip_song(message) {
 
     if (!message.member.voiceChannel) return message.channel.send('**❌ You have to be in a voice channel to use this command.**');
@@ -318,7 +316,7 @@ function playMusic(id, message) {
             filter: 'audioonly'
 
         });
-////////////////////////Mahmoud-QuaStyle
+
         skipReq = 0;
 
         skippers = [];
@@ -383,7 +381,7 @@ function getID(str, cb) {
 
 }
 
-////////////////////////Mahmoud-QuaStyle
+
 function add_to_queue(strID) {
 
     if (isYoutube(strID)) {
@@ -414,7 +412,7 @@ function search_video(query, cb) {
 }
 
 
-////////////////////////Mahmoud-QuaStyle
+
 function isYoutube(str) {
 
     return str.toLowerCase().indexOf('youtube.com') > -1;
@@ -422,15 +420,20 @@ function isYoutube(str) {
 }
 
 
+////////////////////////By:Mahmoud-Quatyle
+
+////////////////////////By:Mahmoud-Quatyle
+
+
+
+////////////////////////By:Mahmoud-Quatyle
+
+////////////////////////By:Mahmoud-Quatyle
 
 
 
 
-
-
-
-
-
+////////////////////////By:Mahmoud-Quatyle
 
 
 
@@ -535,7 +538,7 @@ client.on('message', message => {
 
                         }
 
-  //////////////Mahmoud-QuaStyle
+  
 
   if (message.content.startsWith(adminprefix + 'streaming')) {
 
@@ -583,7 +586,9 @@ if (message.content.startsWith(adminprefix + 'setavatar')) {
 
 
 
-////////////////top Man
+////////////////////////By:Mahmoud-Quatyle
+
+
 
 
 
@@ -623,6 +628,7 @@ message.author.sendEmbed(embed)
 }
 
 });
+////////////////////////By:Mahmoud-Quatyle
 
 
 client.on('message', msg => {
@@ -637,12 +643,16 @@ client.on('message', msg => {
 
 });
 
+////////////////////////By:Mahmoud-Quatyle
+
+////////////////////////By:Mahmoud-Quatyle
+
+////////////////////////By:Mahmoud-Quatyle
+
+////////////////////////By:Mahmoud-Quatyle
 
 
-
-
-
-
+////////////////////////By:Mahmoud-Quatyle
 
 
 
